@@ -1,6 +1,37 @@
 body {
 	background-color: #302c28;
 }
+
+.menutop {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* width: 200px;
+    background-color: #f1f1f1; */
+    height: 100%;
+ 	position: absolute;
+    overflow: auto;
+	top: 10%;
+}
+
+.menuitems {
+	display: inline;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+	
+}
+
+.menuitems:hover {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
 .fa {color: white;}
 .titles {
 	font-family: 'Alfa Slab One';
