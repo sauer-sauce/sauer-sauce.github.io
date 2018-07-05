@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+	<head>
+		<title>SauerSauce</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="https://i.imgur.com/Ru6zZZf.png">
+		<link rel="stylesheet" type="text/css" href="style.css">	
+	</head> 
 
-  <body>
+  	<body>
+		<center>
+			<div class="content">
+				<p class="subtitles">Cube 2: Sauerbraten</p>
+				<p class="descriptions">Sauerbraten is a free multiplayer & singleplayer first person shooter, the successor of the Cube FPS.</p>
+				<p>Much like the original Cube, the aim of this game is fun, old school deathmatch gameplay and also to allow map/geometry editing to be done cooperatively in-game.</p>
+				<p>The engine supporting the game is entirely original in code & design, and its code is Open Source (ZLIB license, read the docs for more on how you can use the engine).</p>
+				<iframe class="contentvideo" width="605" height="260" src="https://www.youtube.com/embed/fX7o-1OH-WM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			
+			<div class="content">
+				<p class="subtitles">Welcome to SauerSauce</p>
+				<p class="descriptions">A Place to learn and share Sauerbraten's world. (we do not have pasta or cookies here)</p>
+				<p>If you are looking for a place to learn or help, welcome to SauerSauce, a platform to keep tutorials related to Cube 2 Sauerbraten.</p>
+				<p>This site is maintained by the community, you can find the author of the tutorial next to all posts, feel free to contact him to remove your doubts.</p>
+			</div>
+		  	<div class="page-content">
+			  <div class="wrapper">
+				{{ content }}
+			  </div>
+			</div>			
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
+			<i class="fa fa-arrow-right">
+				<a target="_blank" href="http://sauerbraten.org">www.sauerbraten.org</a>
+			</i>
+		</center>
 
   </body>
 
