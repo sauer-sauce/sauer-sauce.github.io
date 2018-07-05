@@ -19,15 +19,4 @@ layout: default
 			<p>This site is maintained by the community, you can find the author of the tutorial next to all posts, feel free to contact him to remove your doubts.</p>
 		</div>
 	</center>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 </div>

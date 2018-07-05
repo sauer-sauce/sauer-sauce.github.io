@@ -7,23 +7,31 @@ body {
     margin: 0;
     padding: 0;
     /* width: 200px;
-    background-color: #f1f1f1; */
-    height: 100%;
+    background-color: #f1f1f1;
  	position: absolute;
     overflow: auto;
-	top: 10%;
+	top: 220px;
+	right: 300px;
+	*/
+	height: 100%;
 }
 
 .menuitems {
 	display: inline;
+	background-color: #555;
     color: #000;
     padding: 8px 16px;
     text-decoration: none;
-	
+	border-style: solid;
+	border-color: #201d1a;
+	border-width: 2px;
+	border-bottom: none;
+	position: relative;
+	z-index: 1;
 }
 
 .menuitems:hover {
-    background-color: #555;
+    background-color: #201d1a;
     color: white;
 }
 
@@ -104,4 +112,6 @@ a {
 	border-style: solid;
 	border-color: #201d1a;
 	border-width: 2px;
+	position: relative;
+	z-index: 2;
 }
