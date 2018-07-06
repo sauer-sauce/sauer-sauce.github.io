@@ -31,7 +31,10 @@ body {
 
 .staticcategories {
 	color: #9c9c9c;	
-	
+}
+
+.postinfo {
+	text-align: center;
 }
 
 .menuitems:hover {
