@@ -29,6 +29,11 @@ body {
 	z-index: 1;
 }
 
+.staticcategories {
+	color: #9c9c9c;	
+	
+}
+
 .menuitems:hover {
     background-color: #201d1a;
     color: white;

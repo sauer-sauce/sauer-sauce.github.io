@@ -18,5 +18,20 @@ layout: default
 			<p>If you are looking for a place to learn or help, welcome to SauerSauce, a platform to keep tutorials related to Cube 2 Sauerbraten.</p>
 			<p>This site is maintained by the community, you can find the author of the tutorial next to all posts, feel free to contact him to remove your doubts.</p>
 		</div>
+		<h1 class="staticcategories">Community</h1>
+		<div class="content">
+			<h2>{{ page.list_title | default: "Posts" }}</h2>
+			<ul style="list-style-type: none; margin: 0; padding: 0;">
+			  {% for post in site.posts %}
+				<li>
+					<a href="{{ post.url }}">
+						<p class="subtitles">{{ post.title }} <i class="fas fa-angle-double-right"></i></p>
+						
+					</a>
+					<p class="descriptions">{{ post.excerpt }}</p>
+				</li>
+			  {% endfor %}
+			</ul>		
+		</div>
 	</center>
 </div>
