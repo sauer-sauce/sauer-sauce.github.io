@@ -2,10 +2,6 @@ body {
 	background-color: #302c28;
 }
 
-hr {
-	color: black;	
-}
-
 .menutop {
     list-style-type: none;
     margin: 0;
@@ -19,14 +15,6 @@ hr {
 	*/
 	height: 100%;
 }
-
-.post_menutop {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-	padding-top: 20px;
-}
-
 .menuitems {
 	display: inline;
 	background-color: #555;
