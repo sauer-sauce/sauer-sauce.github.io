@@ -21,18 +21,20 @@
 				<li class="menuitems"><a target="_blank" href="https://discord.gg/bTUPj47"><i class="fab fa-discord"></i> Discord</a></li>
 			</ul>
 		</div>
-		
+
 		<div class="post">
 			<header class="content">
 				<h1 class="subtitles">{{ page.title }}</h1>
-				<p class="descriptions">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }} ({{ page.categories }}) {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-
+				<p class="descriptions">
+					{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • 
+					<img style="width: 2%; heigth: 2%" src="https://api.adorable.io/avatars/5/{{ page.author }}.png"/>
+					{{ page.author }} ({{ page.categories }}) {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 				<article>
 					{{ content }}
 				</article>
 			</header>
 		</div>
-
+		
 		<br>
 		
 		<div class="content">

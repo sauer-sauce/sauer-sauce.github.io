@@ -2,6 +2,7 @@
 layout: post
 title:  "Cube 2: Sauerbraten"
 date:   2018-07-03 22:19:14
+author: Josias
 categories: community
 excerpt: Sauerbraten is a free multiplayer & singleplayer first person shooter, the successor of the Cube FPS.
 ---
