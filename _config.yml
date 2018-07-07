@@ -10,9 +10,3 @@ github_username:  SauerSauce
 
 # Build settings
 markdown: kramdown
-
-github_comments:
-  repo: sauer-sauce/sauer-sauce.github.io
-  branch: master
-  comment_template: _includes/comment.html
-  comments_template: _includes/comments.html
