@@ -41,7 +41,14 @@ hr {
 	z-index: 1;
 }
 
+.pseparator {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #201d1a;
+}
+
 .staticcategories {
+	font-size: 25px;
 	color: #9c9c9c;	
 }
 
@@ -137,10 +144,12 @@ a {
 
 /* animations */
 .logoshowdown {
+	opacity: 0;
 	transform: translateY(-120%);
 	animation: Showdown 1s forwards 1s linear;	
 }
 .titles {
+	opacity: 0;
 	transform: translateX(-100%);
 	animation: Showside 1s forwards 1s ease-out;	
 }
@@ -151,11 +160,13 @@ a {
 @keyframes Showdown{
     100%{
         transform: translateY(5%);
+		opacity: 3;
     }
 }
 
 @keyframes Showside{
 	100%{
 		transform: translateX(0%);
+		opacity: 3;
 	}
 }

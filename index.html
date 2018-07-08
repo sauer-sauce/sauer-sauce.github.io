@@ -24,16 +24,21 @@ layout: default
 		<div class="content">
 			<h1 class="staticcategories">Community</h1>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
-			  {% for post in site.posts %}
+			  {% for post in site.categories.community %}
 				<li>
-					<a href="{{ post.url }}">
-						<p class="subtitles">{{ post.title }} <i class="fas fa-angle-double-right"></i></p>
-					</a>
-					<p class="postinfo"> {{ post.date | date: '%B %d, %Y' }} </p>
-					<p class="descriptions">{{ post.excerpt }}</p>
+					{% include category.html %}
 				</li>
 			  {% endfor %}
-			</ul>		
+			</ul>
+			<p class="pseparator"></p>
+			<h1 class="staticcategories"><i class="fa fa-book"></i> Tutorials</h1>
+			<ul style="list-style-type: none; margin: 0; padding: 0;">
+			  {% for post in site.categories.tutorials %}
+				<li>
+					{% include category.html %}
+				</li>
+			  {% endfor %}
+			</ul>
 		</div>
 	</center>
 </div>
