@@ -5,24 +5,16 @@ layout: default
 <div class="home">
 	<center>
 		<div class="content">
-			<h1 class="staticcategories">About</h1>
-			<p class="subtitles">Cube 2: Sauerbraten</p>
-			<p class="descriptions">Sauerbraten is a free multiplayer & singleplayer first person shooter, the successor of the Cube FPS.</p>
-			<p>Much like the original Cube, the aim of this game is fun, old school deathmatch gameplay and also to allow map/geometry editing to be done cooperatively in-game.</p>
-			<p>The engine supporting the game is entirely original in code & design, and its code is Open Source (ZLIB license, read the docs for more on how you can use the engine).</p>
-			
-		</div>
-
-		<div class="content">
+			<h1 class="fakecategorie"><i class="fas fa-info-circle"></i> About</h1>
 			<p class="subtitles">Welcome to SauerSauce</p>
-			<p class="descriptions">A Place to learn and share Sauerbraten's world. (we do not have pasta or cookies here)</p>
+			<p class="descriptions">A Place to learn and share <a href="http://sauerbraten.org">Sauerbraten</a>'s world.</p>
 			<p>If you are looking for a place to learn or help, welcome to SauerSauce, a platform to keep tutorials related to Cube 2 Sauerbraten.</p>
 			<p>This site is maintained by the community, you can find the author of the tutorial next to all posts, feel free to contact him to remove your doubts.</p>
 		</div>
-		<p>Last Post: <a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a> by {{site.posts.first.author}} on {{site.posts.first.categories}} [{{ site.posts.first.date | date: '%B %d, %Y' }}]</p> 
+		<p>Last Post: <a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a> by {{site.posts.first.author}} in {{site.posts.first.categories}} [{{ site.posts.first.date | date: '%B %d, %Y' }}]</p> 
 			
 		<div class="content">
-			<h1 class="staticcategories">Community</h1>
+			<h1 class="staticcategories"><i class="fas fa-users"></i> Community</h1>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.categories.community %}
 				<li>
@@ -30,7 +22,9 @@ layout: default
 				</li>
 			  {% endfor %}
 			</ul>
+			
 			<p class="pseparator"></p>
+			
 			<h1 class="staticcategories"><i class="fa fa-book"></i> Tutorials</h1>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.categories.tutorials %}

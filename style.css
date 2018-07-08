@@ -48,8 +48,20 @@ hr {
 }
 
 .staticcategories {
+	cursor: pointer;
 	font-size: 25px;
-	color: #9c9c9c;	
+	color: #9c9c9c;
+	transition: font-size 0.1s, color 0.2s;
+}
+
+.fakecategorie {
+	font-size: 25px;
+	color: #9c9c9c;
+}
+
+.staticcategories:hover {
+	font-size: 28px;
+	color: white;
 }
 
 .postinfo {
