@@ -1,5 +1,5 @@
 <a href="{{ post.url }}">
 <p class="subtitles">{{ post.title }} <i class="fas fa-angle-double-right"></i></p>
 </a>
-<p class="postinfo"> {{ post.date | date: '%B %d, %Y' }} </p>
+<p class="postinfo"> by {{ post.author }} - {{ post.date | date: '%B %d, %Y' }} </p>
 <p class="descriptions">{{ post.excerpt }}</p>
