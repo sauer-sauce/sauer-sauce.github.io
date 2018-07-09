@@ -208,3 +208,10 @@ a {
 		opacity: 3;
     }
 }
+
+@keyframes Showside{
+	100%{
+		transform: translateX(0%);
+		opacity: 3;
+	}
+}
