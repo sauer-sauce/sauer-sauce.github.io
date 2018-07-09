@@ -44,6 +44,12 @@
 					{{ page.author }} ({{ page.categories }}) {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 				<article style="text-align: justify; font-size: 15px;">
 					{{ content }}
+					
+				{% if page.content == "" %}
+				<p style="text-align: right;">This post is not complete, you can help by <a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/{{page.path}}">expanding it</a>.</p>
+				{% else %}
+					{% assign found = true %}
+				{% endif %}
 				</article>
 			</header>
 		</div>
