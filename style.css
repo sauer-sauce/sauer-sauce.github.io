@@ -20,6 +20,32 @@ hr {
 	height: 100%;
 }
 
+.menuside {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #302c283d;
+    height: 30%;
+    position: fixed;
+    z-index: 3;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #201d1a;
+	
+	transform: translateX(-50%);
+	transition: translateX 1s;
+}
+
+.menuside:hover {
+	transform: translateX(0%);
+	transition: translateX 1s;
+}
+
+.menusideitems {
+	
+}
+
 .post_menutop {
     list-style-type: none;
     margin: 0;
@@ -94,8 +120,15 @@ hr {
 .subtitles {
 	font-size: 25px;
 	font-family: 'Ubuntu';
-	color: white;
+	color: #FB0;
 	text-align: center;
+	background-color: #201d1a;
+}
+
+.sidesubtitles {
+	font-family: 'Ubuntu';
+	color: #FB0;
+	text-align: left;
 	background-color: #201d1a;
 }
 
@@ -174,11 +207,4 @@ a {
         transform: translateY(5%);
 		opacity: 3;
     }
-}
-
-@keyframes Showside{
-	100%{
-		transform: translateX(0%);
-		opacity: 3;
-	}
 }

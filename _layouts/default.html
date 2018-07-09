@@ -18,6 +18,8 @@
 			<p class="titles">SauerSauce</p>
 			<img class="logoshowdown" src="content/images/sauerlogo.png"/>
 		</div>
+		<p style="text-align: right;">Posts: {% assign counter = 1 %}{% for item in site.posts %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }}</p>
+		<p style="text-align: right;">Hey, want to contribute with posts/content? Make your pull request on <a href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/_posts">Github</a>!</p>
 		<div align="center">
 			<ul class="menutop">
 				<li class="menuitems"><a href="https://sauer-sauce.github.io/"><i class="fa fa-home"></i> Home</a></li>
