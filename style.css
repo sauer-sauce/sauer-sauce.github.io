@@ -200,7 +200,7 @@ a {
 }
 .menutop {
 	transform: translateY(120%);
-	animation: Showdown 1s forwards 2s ease-in-out;	
+	animation: Showdown 1s forwards 2s ease-in-out;
 }
 @keyframes Showdown{
     100%{
