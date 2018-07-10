@@ -37,13 +37,13 @@ Cons:
 Normals are sampled at each vertex of the surface. If the angle between two surfaces' normals (which meet at a vertex) is less than A, then the resulting normal will be the average of the two. Normals are then later interpolated between the normals at the vertexes of a surface. <br>
 Default: <strong>/lerpangle 44</strong>
 
-<div class="contentcomparation">
+<div class="contentbox">
 Pros:
 	<li> Very low size of file. If you can discrease size (20-40%?!) of map why don't use it ?</li>
 	<li> Speed of light calculating inscreased at least on 20%</li>
 </div>
 
-<div class="contentcomparation">
+<div class="contentbox">
 Cons:
 	<li> Possible increasing load time of map</li>
 	<li> Possible unstable FPS on map (need more tests maybe)</li>
