@@ -6,6 +6,28 @@ hr {
 	color: black;	
 }
 
+.contentcomparation {
+    background-color: #424242;
+    padding-left: 6%;
+    padding-right: 5%;
+    color: #8ee7f9;
+    font-size: 12px;
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 0;
+    margin-right: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #201d1a;
+}
+.li {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 2%;
+	font-family: 'Ubuntu';
+	color: white;
+}
+
 .menutop {
     list-style-type: none;
     margin: 0;
@@ -67,6 +89,20 @@ hr {
 	z-index: 1;
 }
 
+.fakemenuitems {
+	display: inline;
+	background-color: #333;
+    color: #000;
+    padding: 2px 16px;
+    text-decoration: none;
+	border-style: solid;
+	border-color: #201d1a;
+	border-width: 2px;
+	border-bottom: none;
+	position: relative;
+	z-index: 1;
+}
+
 .pseparator {
 	border-style: solid;
 	border-width: 2px;
@@ -83,6 +119,7 @@ hr {
 .fakecategorie {
 	font-size: 25px;
 	color: #9c9c9c;
+    padding-left: 1%;
 }
 
 .staticcategories:hover {
@@ -105,7 +142,7 @@ hr {
 }
 
 .fa {color: white;}
-.titles {
+.titles, .faketitles {
 	font-family: 'Alfa Slab One';
 	text-align: center;
 	color: white;
@@ -150,9 +187,15 @@ p {
 a {
 	font-family: 'Ubuntu', sans-serif;
 	text-decoration: none;
-	text-align: right;
 	color: #7e91ff;
 
+}
+
+.fakea {
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration: none;
+	color: #666;
+	cursor: not-allowed;
 }
 
 .contentimg {
@@ -200,7 +243,7 @@ a {
 }
 .menutop {
 	transform: translateY(120%);
-	animation: Showdown 1s forwards 2s ease-in-out;	
+	animation: Showdown 1s forwards 2s ease-in-out;
 }
 @keyframes Showdown{
     100%{
