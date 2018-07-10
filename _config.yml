@@ -1,5 +1,6 @@
 # Site settings
 title: Sauer Sauce
+image: content/images/sauerlogo.png
 email: sauersauce.contact@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
    A place to learn and share Sauerbraten's world.
@@ -8,7 +9,7 @@ url: "http://sauer-sauce.github.io" # the base hostname & protocol for your site
 twitter_username: SalatielSauer
 github_username:  sauer-sauce
 
-plugins:
+gems:
   - jekyll-seo-tag
 
 # Build settings
