@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+<div class="home">
+	<p style="text-align: right;">Hey, want to contribute with posts/content? Make your pull request on <a href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/_posts">Github</a>!</p>
+	{% include menu.html %}
+	<div class="content">
+		<h1 style="font-size: 18px;" class="staticcategories"><i class="fa fa-book"></i> Categories</h1>
+		<ul style="list-style-type: none; margin: 0; padding: 0;">
+		{% assign sorted_cats = site.categories | sort %}
+		{% for category in sorted_cats %}
+		{% assign sorted_posts = category[1] | reversed %}
+		<h2 class="fakecategorie" style="margin-left: 10%; text-align: left;" id="{{category[0] | uri_escape | downcase }}">{{category[0] | capitalize}}</h2>
+		<ul>
+		  {% for post in sorted_posts %}
+			<li style="list-style-type: none; margin: 0; padding: 0;">
+				<p>
+					<a style="color: #FB0;" href="{{ site.url }}{{ site.baseurl }}{{  post.url }}"><i class="fas fa-angle-double-left"></i> {{  post.title }}</a>
+					| by {{ post.author }} - [{{ post.date | date: "%b %-d, %Y"}}]
+				</p>
+			</li>
+		{% endfor %}
+		</ul>
+		{% endfor %}
+
+		</ul>
+	</div>
+</div>

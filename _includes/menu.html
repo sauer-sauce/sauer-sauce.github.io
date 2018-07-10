@@ -1,13 +1,21 @@
 <div align="center">
-{% if page.layout == "post" %}
-<ul class="post_menutop">
-<li class="menuitems"><a href="https://sauer-sauce.github.io/"><i class="fa fa-home"></i> Home</a></li>
-{% else %}
+{% if page.layout == "default" %}
+{% assign menupath = site.url %}
 <ul class="menutop">
 <li class="menuitems"><a href="{{page.url}}"><i class="fas fa-sync-alt"></i> Refresh</a></li>
+{% else %}
+{% assign menupath = page.url %}
+<ul class="post_menutop">
+<li class="menuitems"><a href="https://sauer-sauce.github.io/"><i class="fa fa-home"></i> Home</a></li>
 {% endif %}
-<li class="menuitems"><a href="{{site.url}}#tutorials"><i class="fa fa-book"></i> Tutorials</a></li>
-<li class="menuitems"><a href="{{site.url}}#questions"><i class="fa fa-question"></i> Questions</a></li>
+	
+{% if page.layout == "page" or page.layout == "post" %}
+	<li class="fakemenuitems"><a class="fakea"><i class="fa fa-book"></i> Tutorials</a></li>
+	<li class="fakemenuitems"><a class="fakea"><i class="fa fa-question"></i> Questions</a></li>
+{% else %}
+	<li class="menuitems"><a href="{{menupath}}/#tutorials"><i class="fa fa-book"></i> Tutorials</a></li>
+	<li class="menuitems"><a href="{{menupath}}/#questions"><i class="fa fa-question"></i> Questions</a></li>
+{% endif %}
 <li class="menuitems"><a target="_blank" href="https://discord.gg/bTUPj47"><i class="fab fa-discord"></i> Discord</a></li>
 </ul>
 </div>

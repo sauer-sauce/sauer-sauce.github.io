@@ -67,6 +67,20 @@ hr {
 	z-index: 1;
 }
 
+.fakemenuitems {
+	display: inline;
+	background-color: #333;
+    color: #000;
+    padding: 2px 16px;
+    text-decoration: none;
+	border-style: solid;
+	border-color: #201d1a;
+	border-width: 2px;
+	border-bottom: none;
+	position: relative;
+	z-index: 1;
+}
+
 .pseparator {
 	border-style: solid;
 	border-width: 2px;
@@ -150,9 +164,15 @@ p {
 a {
 	font-family: 'Ubuntu', sans-serif;
 	text-decoration: none;
-	text-align: right;
 	color: #7e91ff;
 
+}
+
+.fakea {
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration: none;
+	color: #666;
+	cursor: not-allowed;
 }
 
 .contentimg {
