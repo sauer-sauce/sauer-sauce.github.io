@@ -6,6 +6,28 @@ hr {
 	color: black;	
 }
 
+.contentcomparation {
+    background-color: #424242;
+    padding-left: 6%;
+    padding-right: 5%;
+    color: #8ee7f9;
+    font-size: 12px;
+    margin-left: 8%;
+    margin-top: 1%;
+    margin-bottom: 0;
+    margin-right: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #201d1a;
+}
+.li {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 2%;
+	font-family: 'Ubuntu';
+	color: white;
+}
+
 .menutop {
     list-style-type: none;
     margin: 0;
@@ -97,11 +119,7 @@ hr {
 .fakecategorie {
 	font-size: 25px;
 	color: #9c9c9c;
-    background-color: #6161618a;
-    border-radius: 20px;
     padding-left: 1%;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
 }
 
 .staticcategories:hover {
