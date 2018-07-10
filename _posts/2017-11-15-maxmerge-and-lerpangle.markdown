@@ -13,14 +13,14 @@ Default: <strong>/maxmerge 6</strong>
 The higher you set this var the connection distance longer. 
 <br>
 
-<div class="contentcomparation">
+<div class="contentbox">
 Pros:
 	<li> Disceasing amount of polygons (wtr) on your map</li>
 	<li> Possible discresaing output file of your map.</li>
 	<li> If map big enough it can increase fps on your map (see Examples).</li>
 </div>
 
-<div class="contentcomparation">
+<div class="contentbox">
 Cons:
 	<li> Discreasing amount of polygons doen't always mean that it will be the same to your fps. FPS can be lower after this command (- 1-5 fps. Minor influence).</li>
 	<li> Possible increasing load time of map.</li>
