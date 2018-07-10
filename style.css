@@ -55,7 +55,7 @@ hr {
     border-width: 1px;
     border-color: #201d1a;
 	
-	transform: translateX(-50%);
+	transform: translateX(-90%);
 	transition: translateX 1s;
 }
 
