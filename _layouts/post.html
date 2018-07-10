@@ -42,13 +42,23 @@
 					{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • 
 					<img style="width: 2%; heigth: 2%" src="https://api.adorable.io/avatars/5/{{ page.author }}.png"/>
 					{{ page.author }} ({{ page.categories }}) {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-				{% assign contente = post.content | strip_newlines %}
-				{% if contente == "" %}
-				<p style="text-align: right;">This post is not complete, you can help by <a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/{{page.path}}"><i class="fab fa-github"></i> expanding it</a>.</p>
-				{% else %}
 				<article style="text-align: justify; font-size: 15px;">
 					{{ content }}
 				</article>
+				
+				{% assign contente = page.content | strip_newlines %}
+				{% if contente == "" %}
+					<p style="text-align: right;">
+					This post has never been started, you can help by 
+					<a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/{{page.path}}">
+					<i class="fab fa-github"></i> creating it</a>.</p>
+				
+				{% else %}
+				
+					<p style="text-align: right; font-size: 14px;">
+					This post is not complete? You can help by 
+					<a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/{{page.path}}">
+					<i class="fab fa-github"></i> expanding it</a>.</p>
 				{% endif %}
 			</header>
 		</div>
