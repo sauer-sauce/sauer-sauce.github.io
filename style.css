@@ -97,6 +97,11 @@ hr {
 .fakecategorie {
 	font-size: 25px;
 	color: #9c9c9c;
+    background-color: #6161618a;
+    border-radius: 20px;
+    padding-left: 1%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .staticcategories:hover {
@@ -119,7 +124,7 @@ hr {
 }
 
 .fa {color: white;}
-.titles {
+.titles, .faketitles {
 	font-family: 'Alfa Slab One';
 	text-align: center;
 	color: white;
