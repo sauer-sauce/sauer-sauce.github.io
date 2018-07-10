@@ -8,5 +8,8 @@ url: "http://sauer-sauce.github.io" # the base hostname & protocol for your site
 twitter_username: SalatielSauer
 github_username:  sauer-sauce
 
+plugins:
+  - jekyll-seo-tag
+
 # Build settings
 markdown: kramdown
