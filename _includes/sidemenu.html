@@ -11,9 +11,9 @@
 	</li>
 	<p style="font-size: 12px;">These posts need your support:</p>
 	{% for post in site.posts %}
-	{% if post.url != page.url %}
 	{% assign postcontente = post.content | strip_newlines %}
 	{% if postcontente == "" %}
+	{% if post.url != page.url %}
 	<li class="menusideitems">
 		<a href="{{ post.url }}">
 			<p style="font-size: 13px; border-style: solid; border-width: 1px; border-color: black;" class="sidesubtitles">
@@ -22,11 +22,11 @@
 		</a>	
 
 	</li>
-	{% endif %}
 	{% else %}
 	<p style="font-size: 13px; border-style: solid; border-width: 1px;" class="sidesubtitles">
 	<i title="missing content" class="fas fa-edit"></i>{{ post.title }}
 	</p>
+	{% endif %}
 	{% endif %}
 	{% endfor %}
 </ul>
