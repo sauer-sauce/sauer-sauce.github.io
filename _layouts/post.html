@@ -1,43 +1,21 @@
 <html>
 	<head>
 		<title>SauerSauce - Reading "{{ page.title }}"</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-		<link rel="icon" href="../../../../content/images/sauerlogo.png">
-		<link rel="stylesheet" type="text/css" href="../../../../style.css">
-		<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+ 		{% include head.html %}
 	</head>
-	{% include menu.html %}
+
+	<div class="banner">
+	<p class="faketitles">SauerSauce</p>
+	<img style="transform: translateY(5%);" src="{{site.base}}/content/images/sauerlogo.png"/>
+	</div>	
 	
-	<ul class="menuside">
-		<li>
-			<a href="{{site.url}}" title="home"><i class="fas fa-arrow-circle-left"></i></a>
-			<a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/_posts" title="new post"><i class="fas fa-pencil-alt"></i></a>
-			<a href="{{page.url}}" title="refresh"><i class="fas fa-sync-alt"></i></a>
-		</li>
-		{% for post in site.posts %}
-		{% if post.url != page.url %}
-		<li class="menusideitems">
-			<a href="{{ post.url }}">
-				<p style="font-size: 13px;" class="sidesubtitles"><i class="fas fa-angle-double-left"></i> {{ post.title }}</p>
-			</a>	
-			
-		</li>
-		{% else %}
-		{% assign found = true %} 
-		{% endif %}
-		{% endfor %}
-	</ul>
-
+	{% include menu.html %}
+	{% include sidemenu.html %}
+	
 	<center>
-
 		<div class="post">
 			<header class="content">
-				<h1 class="subtitles">{{ page.title }} <a style="font-size: 15px;" target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/{{page.path}}" title="edit post"><i class="fas fa-pencil-alt"></i></a></h1>
+				<h1 class="subtitles">{{ page.title }} <a style="font-size: 15px;" target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/{{page.path}}" title="edit post"><i class="fas fa-edit"></i></a></h1>
 				<p class="descriptions">
 					{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • 
 					<img style="width: 2%; heigth: 2%" src="https://api.adorable.io/avatars/5/{{ page.author }}.png"/>
@@ -45,16 +23,13 @@
 				<article style="text-align: justify; font-size: 15px;">
 					{{ content }}
 				</article>
-				
 				{% assign contente = page.content | strip_newlines %}
 				{% if contente == "" %}
 					<p style="text-align: right; font-size: 14px;">
 					This article has never been started, you can help by 
 					<a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/edit/contribution/{{page.path}}">
 					<i class="fab fa-github"></i> creating it</a>.</p>
-				
 				{% else %}
-				
 					<p style="text-align: right; font-size: 14px;">
 					This article is not complete? You can help by 
 					<a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/edit/contribution/{{page.path}}">
@@ -62,9 +37,7 @@
 				{% endif %}
 			</header>
 		</div>
-		
 		<br>
-		
 		<div class="content">
 			<h1 style="text-align: left;" class="fakecategorie">See also</h1>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
@@ -84,7 +57,5 @@
 			</ul>		
 		</div>
 	</center>
-	
 	{% include footer.html %}
-	
 </html>
