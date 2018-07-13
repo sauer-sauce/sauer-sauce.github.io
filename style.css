@@ -137,6 +137,12 @@ hr {
     color: white;
 }
 
+.posttag:target {
+	background-color: #616161;
+	border-radius: 20px;
+	margin-right: 20%;
+}
+
 .active {
     background-color: #4CAF50;
     color: white;
