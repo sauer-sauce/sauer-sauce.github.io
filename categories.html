@@ -17,9 +17,9 @@ layout: page
 		<ul>
 		  {% for post in sorted_posts %}
 			<li style="list-style-type: none; margin: 0; padding: 0;">
-				<p>
+				<p id="{{post.tags}}" class="posttag">
 					<a style="color: #FB0;" href="{{ site.url }}{{ site.baseurl }}{{  post.url }}"><i class="fas fa-angle-double-left"></i> {{  post.title }}</a>
-					| by {{ post.author }} - [{{ post.date | date: "%b %-d, %Y"}}]
+					| by {{ post.author }} - [{{ post.date | date: "%b %-d, %Y"}}] • <a href="{{page.url}}#{{post.tags}}">{{post.tags}}</a>
 				</p>
 			</li>
 		{% endfor %}

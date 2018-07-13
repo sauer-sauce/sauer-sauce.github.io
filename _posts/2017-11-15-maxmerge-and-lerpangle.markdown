@@ -5,6 +5,7 @@ date:   2017-11-15 15:12:00
 author: "TristamK"
 categories: "tutorials"
 excerpt: "About /maxmerge and /lerpangle commands  - TristamK"
+tags: commands
 ---
  <strong>/maxmerge</strong> determines the maximum connection distance  of polygons
 <br>
