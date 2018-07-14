@@ -19,6 +19,11 @@ hr {
     border-style: solid;
     border-width: 1px;
     border-color: #201d1a;
+	border-radius: 30px;
+}
+
+.fixedcode {
+	color: #8ee7f9;
 }
 .li {
     list-style-type: none;
