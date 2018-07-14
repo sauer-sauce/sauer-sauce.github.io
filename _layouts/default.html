@@ -5,13 +5,13 @@
  		{% include head.html %}
 	</head>
   	<body>
+		<div class="mobilegrid">
 		<div class="banner">
 			<p class="titles">SauerSauce</p>
-			<img class="logoshowdown" src="content/images/sauerlogo.png"/>
+			<img class="logoshowdown" src="content/images/sauerlogo.svg"/>
 		</div>
-		<p style="text-align: right;">Posts: {% assign counter = 1 %}{% for item in site.posts %}{% unless item.published == false %}{% assign counter=counter | plus:1 %}{% endunless %}{% endfor %}{{ counter }}</p>
-		<p style="text-align: right;">Hey, want to contribute with posts/content? Make your pull request on <a href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/_posts">Github</a>!</p>
 		{% include menu.html %}
+		</div>
 		<div class="page-content">
 		  <div class="wrapper">
 			{{ content }}

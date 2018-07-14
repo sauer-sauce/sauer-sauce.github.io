@@ -248,7 +248,6 @@ a {
     z-index: 0;
     top: 0;
     padding-top: 1%;
-    margin-bottom: -5%;
 }
 
 /* animations 
@@ -288,13 +287,7 @@ a {
 */
 
 .mobilemenuitems {
-    text-align: center;
-    background-color: #201d1a;
-    border-radius: 100%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    padding-top: 4%;
-    padding-bottom: 2%;
+
 }
 
 .mobilemenutop {
@@ -307,7 +300,14 @@ a {
 	.menutop {
 		animation: none;
 	}
-	.mobilemenutop {display: unset;}
+	.mobilemenutop {
+		display: unset;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		margin-top: 0;
+		left: 2%;
+	}
 	.mobilemenuitems {display: unset;}
 
 	.menuitems {display: none;}
@@ -324,13 +324,24 @@ a {
 		width: 45px;
 		position: fixed;
 		z-index: 2;
-		left: 0;
-		margin-top: -10px;
+		right: 30%;
+		margin-top: unset;
+		padding-top: unset;
+		margin-bottom: unset;
 	}
 
 	.titles {
 		position: fixed;
 		z-index: 1;
 		top: 0;
+		padding-left: 40%;
+		/* padding-right: 40%; */
+		padding-bottom: 1%;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+
+	.mobilegrid {
+	 padding-top: 5%;
 	}
 }
