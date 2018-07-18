@@ -1,3 +1,62 @@
+.pagetop {
+}
+
+.menubanner {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+	background-color: #ff5233;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #ef0f16;
+}
+
+.menubox {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.menubtns {
+    display: inline;
+    padding: 5px 26px;
+    background-color: #555;
+    color: #302c28;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 130%;
+    position: relative;
+    border-bottom-color: #302c2833;
+    transition: background-color 0.5s, font-size 1s, left 1s, display 1s, top 1s, position 1s;
+    border-color: #201d1a;
+}
+
+.menubtns:hover {
+    background-color: #201d1a;
+    color: white;
+	border-style: none;
+	transition: background-color 0.1s;
+}
+
+.bannertitle {
+    font-family: 'Alfa Slab One';
+    color: white;
+    /* position: absolute; */
+    z-index: 4;
+    text-align: center;
+	font-size: 200%;
+}
+
+.bannerlogo {
+    width: 15%;
+    margin-top: -3%;
+}
+
+.bannerbox {
+    /* padding-left: 20%; */
+    /* position: fixed; */
+    z-index: 4;
+}
+
 body {
 	background-color: #302c28;
 }
@@ -59,42 +118,6 @@ hr {
 .menusideitems {
 	
 }
-
-.menutop {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-	padding-top: 20px;
-}
-
-.menuitems {
-	display: inline;
-	background-color: #555;
-    color: #000;
-    padding: 2px 16px;
-    text-decoration: none;
-	border-style: solid;
-	border-color: #201d1a;
-	border-width: 2px;
-	border-bottom: none;
-	position: relative;
-	z-index: 1;
-}
-
-.fakemenuitems {
-	display: inline;
-	background-color: #333;
-    color: #000;
-    padding: 2px 16px;
-    text-decoration: none;
-	border-style: solid;
-	border-color: #201d1a;
-	border-width: 2px;
-	border-bottom: none;
-	position: relative;
-	z-index: 1;
-}
-
 .pseparator {
 	border-style: solid;
 	border-width: 2px;
@@ -150,18 +173,6 @@ hr {
 }
 
 .fa {color: white;}
-.titles, .faketitles {
-	font-family: 'Alfa Slab One';
-	text-align: center;
-	color: white;
-	font-size: 22px;
-	margin-top: 0%;
-	margin-bottom: -25px;
-	background-color: #ff5233;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #ef0f16;
-}
 
 .subtitles {
 	font-size: 25px;
@@ -220,10 +231,6 @@ a {
 	/* width: 80%; */
 }
 
-.banner {
-    text-align: center;
-}
-
 .content {
 	font-size: 13px;
 	background-color: #555555;
@@ -243,76 +250,10 @@ a {
 	transition: border-color 1s;
 }
 
-.logoshowdown {
-    position: unset;
-    z-index: 0;
-    top: 0;
-    padding-top: 1%;
-}
-
-/* animations 
-.logoshowdown {
-	opacity: 0;
-	transform: translateY(-120%);
-	animation: Showdown 1s forwards 1s linear;	
-}
-
-.menutop {
-	{% if page.layout != "post" %}
-	transform: translateY(120%);
-	animation: Showdown 1s forwards 2s ease-in-out;
-	{% endif %}
-}
-
-
-.titles {
-	opacity: 0;
-	transform: translateX(-100%);
-	animation: Showside 1s forwards 1s ease-out;	
-}
-
-@keyframes Showdown{
-    100%{
-        transform: translateY(5%);
-		opacity: 3;
-    }
-}
-
-@keyframes Showside{
-	100%{
-		transform: translateX(0%);
-		opacity: 3;
-	}
-}
-*/
-
-.mobilemenuitems {
-
-}
-
-.mobilemenutop {
-
-}
-
 .mobilemenuitems, .mobilemenutop {display: none}
 /* min-width */
-@media only screen and (max-width: 720px) {
-	.menutop {
-		animation: none;
-	}
-	.mobilemenutop {
-		display: unset;
-		position: fixed;
-		z-index: 2;
-		top: 0;
-		margin-top: 0;
-		left: 2%;
-	}
-	.mobilemenuitems {display: unset;}
-
-	.menuitems {display: none;}
-    .menuside {display: none;}
-	.fakemenuitems {display: none;}
+@media only screen and (max-width: 847px) {
+	img {width: 100%}
 	.subtitles {font-size: 15px;}
 	.postinfo {display: none;}
 	.staticcategories {
@@ -320,28 +261,33 @@ a {
 		color: white;
 	}
 
-	.logoshowdown {
-		width: 45px;
-		position: fixed;
-		z-index: 2;
-		right: 30%;
-		margin-top: unset;
-		padding-top: unset;
-		margin-bottom: unset;
-	}
-
-	.titles {
+	.menubox {
 		position: fixed;
 		z-index: 1;
 		top: 0;
-		padding-left: 40%;
-		/* padding-right: 40%; */
-		padding-bottom: 1%;
-		border-top-right-radius: 20px;
-		border-bottom-right-radius: 20px;
+		font-size: 10px;
+		display: grid;
+		left: -40px;
+		transition: font-size 1s, left 1s, display 1s, top 1s, position 1s;
 	}
+	.menuside {
+		display: contents;
+		transition: display 1s;
+	}
+}
 
-	.mobilegrid {
-	 padding-top: 5%;
+@media only screen and (max-width: 461px) {
+	.menubtns {
+		background-color: #55555529;
+		text-align: left;
+		transition: background-color 1s, text-align 1s;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.menubtns {
+		display: contents;
+		text-align: left;
+		transition: display 1s, text-align 1s;
 	}
 }
