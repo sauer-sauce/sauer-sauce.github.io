@@ -11,6 +11,8 @@ github_username:  sauer-sauce
 
 gems:
   - jekyll-seo-tag
+  - jekyll-mentions
+  - jemoji
 
 # Build settings
 markdown: kramdown
