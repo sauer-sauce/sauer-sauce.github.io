@@ -54,139 +54,18 @@
 	{% include footer.html %}
 
 	<!-- Post js-->
+	<script src="../../../../cubescript_syntax.js"></script>
+
 	<script>
-	$.fn.attachDragger = function(){
-	    var attachment = false, lastPosition, position, difference;
-	    $(this).on("mousedown mouseup mousemove",function(e){
-	        if( e.type == "mousedown" ) attachment = true, lastPosition = [e.clientX, e.clientY];
-	        if( e.type == "mouseup" ) attachment = false;
-	        if( e.type == "mousemove" && attachment == true ){
-	            position = [e.clientX, e.clientY];
-	            difference = [ (position[0]-lastPosition[0]), (position[1]-lastPosition[1]) ];
-	            $(this).scrollLeft( $(this).scrollLeft() - difference[0] );
-	            $(this).scrollTop( $(this).scrollTop() - difference[1] );
-	            lastPosition = [e.clientX, e.clientY];
-	        }
-	    });
-	    $(window).on("mouseup", function(){
-	        attachment = false;
-	    });
-	};
-	$(document).ready(function(){
-	 $("#cubescript").attachDragger();
-	});
-	var alltypes = ['consolecmds', 'guicmds', 'servercmds', 'scriptcmds', 'variables'];
-	var consolecmds = [
-	'bind', 'editbind', 'alias', 'push', 'local', 'quit', 'forward', 'backward', 'left', 'right', 'attack', 'jump', 'zoom', 'taunt',
-	'floatspeed', 'invmouse', 'sensitivity', 'sensitivityscale', 'maxfps', 'fov', 'zoomfov', 'zoominvel', 'zoomoutvel', 'zoomsens',
-	'zoomautosens', 'hudgun', 'hudgunsway', 'grass', 'grassdist', 'grassstep', 'shaderdetail', 'maxtexsize', 'texcompress',
-	'watersubdiv', 'waterlod', 'waterreflect', 'waterenvmap', 'waterrefract', 'waterfade', 'waterfallrefract', 'waterfallenv',
-	'reflectdist', 'reflectsize', 'maxreflect', 'reflectmms', 'envmapsize', 'maxparticledistance', 'particlesize', 'emitfps',
-	'flarelights', 'flarecutoff', 'flaresize', 'setpostfx', 'screenshot', 'musicvol', 'soundvol', 'soundbufferlen', 'scr_w', 'scr_h',
-	'screenres', 'gamma', 'hidestats', 'hidehud', 'maxroll', 'crosshairsize', 'crosshairfx', 'exec', 'history', 'keymap'
-	];
-
-	var guicmds = [
-	'gui2d', 'menudistance', 'menuautoclose', 'guiautotab', 'cleargui', 'showgui', 'newgui', 'guilist', 'guispring', 'guititle',
-	'guibutton', 'guiimage', 'guitext', 'guitextbox', 'guibar', 'guislider', 'guicheckbox', 'guiradio', 'guitab', 'guifield',
-	"guialign", "guibitfield"
-	];
-
-	var servercmds = [
-	'startlistenserver', 'stoplistenserver', 'serverip', 'serverport', 'maxclients', 'serverbotlimit', 'publicserver', 'serverdesc',
-	'serverpass', 'adminpass', 'servermotd', 'updatemaster', 'mastername', 'restrictdemos', 'maxdemos', 'maxdemosize', 'ctftkpenalty'
-	];
-
-	var scriptcmds = [
-	'div', 'mod', 'strcmp', '!', '&&', 'strstr', 'substr', 'strreplace', 'strlen', 'min',
-	'max', 'rnd', 'if', 'loop', 'loopfiles', 'while', 'concat', 'concatword', 'format', 'at', 'listlen', 'listclients', 
-	'onrelease', 'result', "sleep"
-	];
-
-	var variables = [
-	'editing', 'getalias', 'getbind', 'geteditbind', 'getspecbind', 'getclientnum', 'getclientname', 'getclientteam', 'getname',
-	'getteam', 'getweapon', 'getfps', 'gettex', 'gettexname', 'isconnected', 'isspectator', "getseltex"
-	];
-	//cubescript syntax hl
-	function setcssyntax(cstype, cmtype, type){
-		var kw;
-		var plainscript = document.getElementById("cubescript"); //get text from "cubescript" iD
-		
-		//console commands
-		for (var kw = 0; kw < cmtype.length; kw++) {
-			var thecommand = cmtype[kw];
-
-			if (type === 1){
-				var thecommand2 = new RegExp("\\b" + cmtype[kw] + "\\b", "g");
-				var synscript = plainscript.innerHTML.replace(thecommand2, "<span class='" + cstype + "'>" + thecommand + "</span>");
+		//add class to post img
+		var postimage = document.getElementsByTagName("div")[2].firstElementChild.children[2].firstElementChild.getElementsByTagName("img");
+		$(document).ready(function(){
+			if(postimage === null){}
+			else {
+				for (i = 0; i < postimage.length; i++) {
+					postimage[i].className = "contentimg";
+				}
 			};
-			if (cmtype === "["){
-				var synscript = plainscript.innerHTML.replace(/\[/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === "]"){
-				var synscript = plainscript.innerHTML.replace(/\]/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === "("){
-				var synscript = plainscript.innerHTML.replace(/\(/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === ")"){
-				var synscript = plainscript.innerHTML.replace(/\)/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === "*"){
-				var synscript = plainscript.innerHTML.replace(/\*/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === ">"){
-				var synscript = plainscript.innerHTML.replace(/\>/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === "<"){
-				var synscript = plainscript.innerHTML.replace(/\</g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === "||"){
-				var synscript = plainscript.innerHTML.replace(/\|\|/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			if (cmtype === "="){
-				var synscript = plainscript.innerHTML.replace(/\=/g, "<span class='" + cstype + "'>" + cmtype + "</span>");
-			};
-
-			document.getElementById("cubescript").innerHTML = synscript; //set the modified text
-		};	
-	};
-
-	//add class to post img
-	var postimage = document.getElementsByTagName("div")[2].firstElementChild.children[2].firstElementChild.getElementsByTagName("img");
-	window.onload = function(){
-		if(postimage === null){}
-		else {
-			for (i = 0; i < postimage.length; i++) {
-				postimage[i].className = "contentimg";
-			}
-		};
-		if (plainscript === null){}
-		else {
-			setcssyntax("cs_consolecmds", consolecmds, 1);
-			setcssyntax("cs_guicmds", guicmds, 1);
-			setcssyntax("cs_servercmds", servercmds, 1);
-			setcssyntax("cs_scriptcmds", scriptcmds, 1);
-			setcssyntax("cs_variables", variables, 1);
-			setcssyntax("cs_special", "[");
-			setcssyntax("cs_special", "]");
-			setcssyntax("cs_special", "(");
-			setcssyntax("cs_special", ")");
-			setcssyntax("cs_scriptop", '*');
-			//setcssyntax("cs_scriptop", '>');
-			//setcssyntax("cs_scriptop", '<');
-			//setcssyntax("cs_scriptop", '=');
-			setcssyntax("cs_scriptop", '||');
-		};
-	}
-
+		})
 	</script>
 </html>

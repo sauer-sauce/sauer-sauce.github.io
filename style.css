@@ -6,58 +6,62 @@ img {
 }
 
 .cs_consolecmds, .cs_guicmds, .cs_scriptcmds, .cs_variables, .cs_special, .cs_scriptop {
-	font-family: 'Ubuntu';
-
+	font-family: 'Source Code Pro', monospace;
 }
 
-#cubescript {
-    background-color: #302c28;
-    color: #9a9a9a;
+/*
+.cs_consolecmds {color: #00abff;}
+.cs_guicmds {color: #7de7f9;}
+.cs_scriptcmds {color: #ea36e3;}
+.cs_variables {color: #17ff0a;}
+.cs_special {color: #4c5ac5;}
+.cs_scriptop {color: #2c864c; text-shadow: 0 0 3px #673ab7b3;}
+.cs_nums {color: #FF5722;}
+*/
+
+.cubescript {
+    background-color: #150b1f;
+    color: #c7c7c7;
     padding: 25px;
+    margin-top: 20px;
     margin-left: 15%;
     margin-right: 15%;
     white-space: pre;
-/*	overflow-x: auto; */
+	/*overflow-x: auto; */
     overflow-y: scroll; 
     max-height: 50%;
     font-size: larger;
 	border-style: solid;
-    border-color: #201d1a;
-    overflow: hidden;
-    cursor: grab;
-}
-
-#cubescript:active {
-	cursor: grabbing;
+    border-color: #302c28;
+    /*overflow: hidden; */
+    /* user-select: none; */
+    box-shadow: 0 0 0 5px #00000099;
+    background-image: url("../../../../content/images/background_detail.png");
 }
 
 /* Scrollbar by: GhostRider (https://codepen.io/GhostRider/pen/GHaFw) */
-#cubescript::-webkit-scrollbar-track
+.cubescript::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(1,1,1,1.3);
 	
 	background-color: #201d1a;
 }
 
-#cubescript::-webkit-scrollbar
+.cubescript::-webkit-scrollbar
 {
 	width: 12px;
 	background-color: #201d1a;
+	cursor: grab;
 }
 
-#cubescript::-webkit-scrollbar-thumb
+.cubescript::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(1,1,1,.3);
 	background-color: #ff9311
 }
 
-.cs_consolecmds {color: #00abff;}
-.cs_guicmds {color: #7de7f9;}
-.cs_scriptcmds {color: #ea36e3;}
-.cs_variables {color: #17ff0a;}
-.cs_special {color: #4c5ac5;}
-.cs_scriptop {color: #2c864c;}
+.cubescript::-webkit-scrollbar-corner { background: rgba(0,0,0,0.5); };
 .menubanner {
     position: fixed;
     z-index: 3;

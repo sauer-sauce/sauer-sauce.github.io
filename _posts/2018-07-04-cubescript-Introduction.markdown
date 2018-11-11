@@ -15,14 +15,14 @@ tags: cubescript
 
 <strong>Basics</strong>
 <p>A CubeScript script is basically just a series of syntactically valid statements. A statement will generally be either the invocation of a command or an assignment to a variable. For example, if you’ve ever executed the following in the console:</p>
-<div class="contentbox">
+<div class="cubescript">
 	fov 90
 </div>
 
 <p>then you’ve used CubeScript; that’s a simple command. Command invocations follow a format wherein the command name is followed by the space-separated arguments to the command. <a class="fixedcode">fov</a>, for example, takes just one argument. A command like <a class="fixedcode">bind</a>, on the other hand, takes two: the key to bind, and the action to perform whenever that key is pushed.</p>
 
 <p>Assignments are fairly straightforward too, especially if you’re familiar with conventional programming languages, as the format is largely the same. For example, if we want to store the value 42 in a variable x, we would simply do:</p>
-<div class="contentbox">
+<div class="cubescript">
 	x = 42
 </div>
 
@@ -31,18 +31,18 @@ tags: cubescript
 <p>I should also mention that CubeScript scripts are typically placed in either <a class="fixedcode">autoexec.cfg</a> (in your Sauerbraten folder) or in their own <a class="fixedcode">cfg</a> file alongside <a class="fixedcode">autoexec.cfg</a>, whereupon they can be executed with the command <a class="fixedcode">exec file.cfg</a> from <a class="fixedcode">autoexec.cfg</a>. For larger scripts spanning multiple files, it is also possible to package the files in their own folder and use something like <a class="fixedcode">exec folder/file.cfg</a>.</p>
 
 <p>Finally, CubeScript also supports comments, with a syntax similar to that of C/C++/Java:</p>
-<div class="contentbox" style="color: gray;">
+<div class="cubescript" style="color: gray;">
 	// this is a comment
 </div>
 <p>Note that <a class="fixedcode">/* */</a>-comments are not supported.</p>
 
 <strong>Operators</strong>
 <p>Now that we’ve covered what a CubeScript script actually is, we can go on to talk about more complicated things you can do in one. The first thing to go over is operators such as <a class="fixedcode">+</a>, <a class="fixedcode">-</a>, <a class="fixedcode">*</a>, <a class="fixedcode">/</a> etc. Now, it is important to note here that <strong>CubeScript uses</strong> <a target="_blank" href="https://en.wikipedia.org/wiki/Polish_notation">polish/prefix notation</a>, like Lisp, if you’re familiar with that family of languages. Therefore, something like <a class="fixedcode">2 + 3</a> would, in CubeScript, be expressed as <a class="fixedcode">(+ 2 3)</a>. (This is basically a result of the fact that operators such as <a class="fixedcode">+</a> are just commands themselves, so they follow the same syntax as commands, but you probably don’t need to worry too much about that.) So, returning to our <a class="fixedcode">x</a> variable, let’s say we want to assign to <a class="fixedcode">x</a> the sum of <a class="fixedcode">2</a> and <a class="fixedcode">3</a>, we’d simply do this:</p>
-<div class="contentbox">
+<div class="cubescript">
 	x = (+ 2 3)
 </div>
 <p>If you want to represent a more complicated expression like <a class="fixedcode">(2 + 3) * 4</a>, you have to do some nesting of the parenthesis:</p>
-<div class="contentbox">
+<div class="cubescript">
 	x = (* (+ 2 3) 4)
 </div>
 
@@ -50,14 +50,13 @@ tags: cubescript
 <p>Polish notation might take some getting used to at first, but once you get the hang of it, it’s really quite easy.</p>
 
 <p>Next, we have to be able to access the values we’ve assigned to variables. This is done simply by prefixing the variable name with a <a class="fixedcode">$</a>. For example:</p>
-<div class="contentbox">
+<div class="cubescript">
 	x = (+ 2 3)
-	<br>
 	echo $x
 </div>
 
 <p>would echo “5”. Of course, values of variables can be used in expressions being assigned to said variables. For instance, to increment <a class="fixedcode">x</a> by one:</p>
-<div class="contentbox">
+<div class="cubescript">
 	x = (+ $x 1)
 </div>
 
@@ -67,40 +66,33 @@ tags: cubescript
 <p>As with most other languages, CubeScript supports some basic control flow constructs such as if-else statements and loops.</p>
 <p>In CubeScript, if-else statement follow this syntax:</p>
 
-<div class="contentbox">
+<div class="cubescript">
 	if <a style="color: grey;">condition</a> [ <a style="color: grey;">if body</a> ] [ <a style="color: grey;">else body</a> ]
 </div>
 
 <p>For instance:</p>
-<div class="contentbox">
+<div class="cubescript">
 	if (= $x 42) [
-	<br>
 		echo "x is 42!"
-	<br>
 	] [
-	<br>
 		echo "x is not 42!"
-	<br>
 	]
 </div>
 
 <p>The snippet above will echo “x is 42!” if <a class="fixedcode">x</a> is indeed 42, and will echo “x is not 42!” otherwise. Note that the else-portion is optional: <a class="fixedcode">if condition [ if body ]</a> is valid by itself:</p>
-<div class="contentbox">
+<div class="cubescript">
 	if (= $x 42) [
-	<br>
 		echo "x is 42!"
-	<br>
 	]
 </div>
 
 <p>Let’s move on to loops. The two most basic types of loops in CubeScript are associated with the commands <a class="fixedcode">while</a> and <a class="fixedcode">loop</a>. <a class="fixedcode">while</a> should seem familiar if you’ve programmed in any conventional language before. It has a syntax of</p>
-<div class="contentbox">
+<div class="cubescript">
 	while [ <a style="color: grey;">condition</a> ] [ <a style="color: grey;">body</a> ]
 </div>
 <p>and will repeatedly execute <a style="color: grey;">body</a> so long as <a style="color: grey;">condition</a> is “true” (i.e. not zero). I’ll reuse the example used in the official docs for <a class="fixedcode">while</a>, because I think it’s a pretty good one:</p>
-<div class="contentbox">
+<div class="cubescript">
 	i = 0
-	<br>
  	while [ (< $i 10) ] [ echo $i; i = (+ $i 1) ]
 </div>
 
@@ -118,7 +110,7 @@ tags: cubescript
 
 <p>The next kind of loop is, well, <a class="fixedcode">loop</a>, and it has this syntax: <a class="fixedcode">loop var N [ body ]</a>. In this case, <a class="fixedcode">var</a> is the name of some variable, and <a class="fixedcode">N</a> is a non-negative integer. <a class="fixedcode">loop</a> will set <a class="fixedcode">var</a> to 0, then execute <a class="fixedcode">body N</a> times, and each time it will increment <a class="fixedcode">var</a> (meaning <a class="fixedcode">var</a> will take on the values from 0 to <a class="fixedcode">N-1</a>). Again I’ll use the example from the docs:</p>
 
-<div class="contentbox">
+<div class="cubescript">
 	loop i 10 [ echo $i ]
 </div>
 

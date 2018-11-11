@@ -8,7 +8,20 @@ excerpt: "..."
 tags: cubescript
 ---
 
-<div id="cubescript">
+<div class="cubescript">
+
+//this is a comment
+
+newgui HelloWorld [
+
+	guibutton "^f0Hello!" [sleep 1000 [echo "^f5world!"]]
+	guibar
+	guibutton "^f3Close" [cleargui] "exit"
+]
+
+</div>
+
+<div class="cubescript">
 
 //FavMaps by Salatiel (10/03/2018)
 
@@ -74,6 +87,4 @@ newgui favmaps [
 	]
 ] 0
 
-
 </div>
-
