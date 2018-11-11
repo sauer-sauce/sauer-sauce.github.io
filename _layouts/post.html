@@ -169,21 +169,23 @@
 				postimage[i].className = "contentimg";
 			}
 		};
-
-		setcssyntax("cs_consolecmds", consolecmds, 1);
-		setcssyntax("cs_guicmds", guicmds, 1);
-		setcssyntax("cs_servercmds", servercmds, 1);
-		setcssyntax("cs_scriptcmds", scriptcmds, 1);
-		setcssyntax("cs_variables", variables, 1);
-		setcssyntax("cs_special", "[");
-		setcssyntax("cs_special", "]");
-		setcssyntax("cs_special", "(");
-		setcssyntax("cs_special", ")");
-		setcssyntax("cs_scriptop", '*');
-		//setcssyntax("cs_scriptop", '>');
-		//setcssyntax("cs_scriptop", '<');
-		//setcssyntax("cs_scriptop", '=');
-		setcssyntax("cs_scriptop", '||');
+		if (plainscript === null){}
+		else {
+			setcssyntax("cs_consolecmds", consolecmds, 1);
+			setcssyntax("cs_guicmds", guicmds, 1);
+			setcssyntax("cs_servercmds", servercmds, 1);
+			setcssyntax("cs_scriptcmds", scriptcmds, 1);
+			setcssyntax("cs_variables", variables, 1);
+			setcssyntax("cs_special", "[");
+			setcssyntax("cs_special", "]");
+			setcssyntax("cs_special", "(");
+			setcssyntax("cs_special", ")");
+			setcssyntax("cs_scriptop", '*');
+			//setcssyntax("cs_scriptop", '>');
+			//setcssyntax("cs_scriptop", '<');
+			//setcssyntax("cs_scriptop", '=');
+			setcssyntax("cs_scriptop", '||');
+		};
 	}
 
 	</script>
