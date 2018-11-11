@@ -42,7 +42,7 @@ var plainscript = document.getElementsByClassName("cubescript"); //get text from
 function setcssyntax(cstype, cmtype, type){
 for (ic = 0; ic < plainscript.length; ic++) {
 		var kw;
-		//console commands
+		//commands
 		for (var kw = 0; kw < cmtype.length; kw++) {
 			var thecommand = cmtype[kw];
 
@@ -148,7 +148,7 @@ window.onload = function(){
 		setcssyntax("#4c5ac5", "(");
 		setcssyntax("#4c5ac5", ")");
 		setcssyntax("#4c5ac5", '*');
-		//disable due to escape problems
+		//disabled due to escape problems
 		//setcssyntax("#4c5ac5", '>');
 		//setcssyntax("#4c5ac5", '<');
 		//setcssyntax("#4c5ac5", '=');
