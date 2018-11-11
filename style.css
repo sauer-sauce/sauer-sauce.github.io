@@ -1,6 +1,63 @@
+img {
+	max-width: 100%;
+}
+
 .pagetop {
 }
 
+.cs_consolecmds, .cs_guicmds, .cs_scriptcmds, .cs_variables, .cs_special, .cs_scriptop {
+	font-family: 'Ubuntu';
+
+}
+
+#cubescript {
+    background-color: #302c28;
+    color: #9a9a9a;
+    padding: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
+    white-space: pre;
+/*	overflow-x: auto; */
+    overflow-y: scroll; 
+    max-height: 50%;
+    font-size: larger;
+	border-style: solid;
+    border-color: #201d1a;
+    overflow: hidden;
+    cursor: grab;
+}
+
+#cubescript:active {
+	cursor: grabbing;
+}
+
+/* Scrollbar by: GhostRider (https://codepen.io/GhostRider/pen/GHaFw) */
+#cubescript::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(1,1,1,1.3);
+	
+	background-color: #201d1a;
+}
+
+#cubescript::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #201d1a;
+}
+
+#cubescript::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(1,1,1,.3);
+	background-color: #ff9311
+}
+
+.cs_consolecmds {color: #00abff;}
+.cs_guicmds {color: #7de7f9;}
+.cs_scriptcmds {color: #ea36e3;}
+.cs_variables {color: #17ff0a;}
+.cs_special {color: #4c5ac5;}
+.cs_scriptop {color: #2c864c;}
 .menubanner {
     position: fixed;
     z-index: 3;
@@ -219,8 +276,10 @@ a {
 }
 
 .contentimg {
-    width: 150px;
-	margin-left: 420px;
+    width: 100px;
+	/* margin-left: 420px; */
+	min-width: 100%;
+	max-width: 100%;
 }
 
 .contentvideo {
