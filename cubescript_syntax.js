@@ -1,5 +1,5 @@
 //CubeScript Syntax Highlighting by Salatiel (@SalatielSauer)
-console.log("CubeScript Syntax Highlighting started");
+//console.log("CubeScript Syntax Highlighting started");
 var alltypes = ['consolecmds', 'guicmds', 'servercmds', 'scriptcmds', 'variables'];
 var consolecmds = [
 'bind', 'editbind', 'alias', 'push', 'local', 'quit', 'forward', 'backward', 'left', 'right', 'attack', 'jump', 'zoom', 'taunt',
@@ -38,6 +38,22 @@ var nums = [
 	"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
 ];
 var plainscript = document.getElementsByClassName("cubescript"); //get text from "cubescript" Class
+
+function zoomout(id){
+	plainscript[id].style = ('font-size: larger');
+
+};
+
+function zoomin(id){
+	plainscript[id].style = ('font-size: 50px');
+
+};
+
+function addscriptoverlay(ps){
+	var overlaycontent = "CubeScript <br> <i title='zoom out' class='fas fa-search-minus' onclick='zoomout(" + ps + ")'></i> <i title='zoom in' class='fas fa-search-plus' onclick='zoomin(" + ps + ")'></i> <i title='copy script' class='fas fa-file-download' onclick='window.getSelection().selectAllChildren(plainscript[" + ps + "])'></i>";
+	plainscript[ps].innerHTML = (plainscript[ps].innerHTML + "<div class='scriptdiv-overlay'>" + overlaycontent + "</div>");
+
+};
 
 function setcssyntax(cstype, cmtype, type){
 for (ic = 0; ic < plainscript.length; ic++) {
@@ -162,5 +178,10 @@ window.onload = function(){
 		setcssyntax("#892f89", '^f5');
 		setcssyntax("#bd6001", '^f6');
 		setcssyntax("white", '^f7');
+
+		for (ic = 0; ic < plainscript.length; ic++) {
+			addscriptoverlay(ic);
+		};
 	};
+
 }
