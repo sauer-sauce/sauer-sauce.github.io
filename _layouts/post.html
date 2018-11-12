@@ -57,6 +57,11 @@
 	<script src="../../../../cubescript_syntax.js"></script>
 
 	<script>
+		//Jekyll 
+		var csauthor = "{{ page.author }}";
+		var cslink = ("{{ site.base }}" + "{{ page.url }}");
+		//
+
 		//add class to post img
 		var postimage = document.getElementsByTagName("div")[2].firstElementChild.children[2].firstElementChild.getElementsByTagName("img");
 		$(document).ready(function(){

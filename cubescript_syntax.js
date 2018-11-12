@@ -49,8 +49,20 @@ function zoomin(id){
 
 };
 
+function downloadcfg(elId, csfilename) {
+	var filename = 'sauersauce_cubescript-' + csfilename + '.cfg';
+    var line1 = ("//This cubescript was downloaded from SauerSauce, posted by: " + csauthor + elId.innerText);
+    var elHtml = (line1 + "//URL: " + cslink);
+    var link = document.createElement('a');
+    mimeType = 'text/plain';
+
+    link.setAttribute('download', filename);
+    link.setAttribute('href', 'data:' + mimeType  +  ';charset=utf-8,' + encodeURIComponent(elHtml));
+    link.click(); 
+};
+
 function addscriptoverlay(ps){
-	var overlaycontent = "CubeScript <br> <i title='zoom out' class='fas fa-search-minus' onclick='zoomout(" + ps + ")'></i> <i title='zoom in' class='fas fa-search-plus' onclick='zoomin(" + ps + ")'></i> <i title='copy script' class='fas fa-file-download' onclick='window.getSelection().selectAllChildren(plainscript[" + ps + "])'></i>";
+	var overlaycontent = "//CubeScript: <span style='color: white'>" + (ps + 1) + "</span> <br> <i title='zoom out' class='fas fa-search-minus' onclick='zoomout(" + ps + ")'></i> <i title='zoom in' class='fas fa-search-plus' onclick='zoomin(" + ps + ")'></i> <i title='download script' class='fas fa-file-download' onclick='downloadcfg(plainscript[" + ps + "]," + (ps + 1) + ")'></i>";
 	plainscript[ps].innerHTML = (plainscript[ps].innerHTML + "<div class='scriptdiv-overlay'>" + overlaycontent + "</div>");
 
 };
