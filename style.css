@@ -190,6 +190,7 @@ hr {
     width: 20%;
 	height: 30%;
 	top: 10%;
+	right: 0;
     background-color: #302c283d;
     position: fixed;
     z-index: 3;
