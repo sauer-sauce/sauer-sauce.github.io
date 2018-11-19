@@ -9,12 +9,30 @@
 		<a href="{{page.url}}"><i class="fas fa-sync-alt"></i> Reload</a>
 	</li>
 
+	{% if page.url == "/index.html" %}
 	<li class="menubtns">
 		<a href="{{site.base}}#tutorials"><i class="fa fa-book"></i> Tutorials</a>
 	</li>
 
 	<li class="menubtns">
 		<a href="{{site.base}}#community"><i class="fa fa-globe"></i> Community</a>
+	</li>
+	{% else %}
+	<li class="fakea">
+		<i class="fa fa-book"></i> Tutorials
+	</li>
+
+	<li class="fakea">
+		<i class="fa fa-globe"></i> Community
+	</li>
+
+	<li class="menubtns">
+		<a href="{{site.base}}#tutorials"><i class="fa fa-homek"></i> Home</a>
+	</li>
+	{% endif %}
+	
+	<li class="menubtns">
+		<a href="{{site.base}}#community"><i class="fa fa-bookmark"></i> Categories</a>
 	</li>
 
 	<li class="menubtns">
