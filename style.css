@@ -110,7 +110,7 @@ img {
 .menubtns {
     display: inline;
     padding: 5px 26px;
-    background-color: #555;
+    background-color: #4c4844;
     color: #302c28;
     border-style: solid;
     border-width: 1px;
@@ -119,6 +119,8 @@ img {
     border-bottom-color: #302c2833;
     transition: background-color 0.5s, font-size 1s, left 1s, display 1s, top 1s, position 1s;
     border-color: #201d1a;
+    border-width: 0.1;
+    user-select: none;
 }
 
 .menubtns:hover {
