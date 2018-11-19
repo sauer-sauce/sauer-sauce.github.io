@@ -8,6 +8,8 @@ excerpt: "..."
 tags: cubescript
 ---
 
+<p>Now it's possible to add your code inside a snippet with automatic syntax highlighting:</p>
+
 <div class="cubescript">
 
 //this is a comment
@@ -19,7 +21,25 @@ newgui HelloWorld [
 	guibutton "^f3Close" [cleargui] "exit"
 ]
 
+newgui HelloWorldAgain [
+
+	guibutton "^f0Hello!" [sleep 1000 [echo "^f5world, again!"]]
+	guibar
+	guibutton "^f3Close" [cleargui] "exit"
+]
+
+newgui MYSUPERGUIMENU [
+
+	guibutton "^f0Hello!" [sleep 1000 [echo "^f5world, again!"]]
+	guibar
+	guibutton "^f3Close" [cleargui] "exit"
+]
+
 </div>
+
+<p>To do this is simple, just add a div with a "cubescript" class, for example:</p>
+<p><-div class='cubescript'> Your Script Here <-/div></p>
+<p>(without the hyphens)</p>
 
 <div class="cubescript">
 
@@ -88,3 +108,5 @@ newgui favmaps [
 ] 0
 
 </div>
+
+<p>Also, you can click on <i>some</i> commands and open it directly in the official Sauerbraten docs...</p>

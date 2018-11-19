@@ -39,6 +39,19 @@ var nums = [
 ];
 var plainscript = document.getElementsByClassName("cubescript"); //get text from "cubescript" Class
 
+//get newgui arg
+function guiident(pid){
+	var guimenus = plainscript[pid].innerText.match(/newgui(.*)/g);
+	//console.log(guimenus);
+
+	for (gms = 0; gms < guimenus.length; gms++){
+		var thefinal = guimenus[gms].slice(7, (guimenus[gms].indexOf("[") - 1));
+		var thefinalg =  new RegExp("\\b" + thefinal + "\\b", "g");
+		//console.log(thefinal);
+		plainscript[pid].innerHTML = plainscript[pid].innerHTML.replace(thefinalg, "<span style='color: #b95df3'><i>" + thefinal + "</i></span>");
+	}
+};
+
 function zoomout(id){
 	plainscript[id].style = ('font-size: larger');
 
@@ -83,7 +96,7 @@ for (ic = 0; ic < plainscript.length; ic++) {
 			//exactly
 			if (type === 1){
 				var thecommand2 = new RegExp("\\b" + cmtype[kw] + "\\b", "g");
-				var synscript = (plainscript[ic]).innerHTML.replace(thecommand2, "<span style='color:" + cstype + "'>" + thecommand + "</span>");
+				var synscript = (plainscript[ic]).innerHTML.replace(thecommand2, "<a target='_blank' href='http://sauerbraten.org/docs/config.html#" + thecommand + "'><span style='color:" + cstype + "'>" + thecommand + "</span></a>");
 			};
 
 			//by word
@@ -193,6 +206,7 @@ window.onload = function(){
 
 		for (ic = 0; ic < plainscript.length; ic++) {
 			addscriptoverlay(ic);
+			guiident(ic);
 		};
 	};
 
