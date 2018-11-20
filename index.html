@@ -15,7 +15,7 @@ layout: default
 		</div>
 		<p style="text-align: center;"><b>Latest contribution</b>: <a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a> by {{site.posts.first.author}} in {{site.posts.first.categories}} [{{ site.posts.first.date | date: '%B %d, %Y' }}]</p>
 		<li style="display: flex;">
-		<div style="margin-left: 32px; border-right-width: 1px;" id="community" class="content">
+		<div style="margin-left: 32px; border-right-width: 1px; margin-right: 10px;" id="community" class="content">
 			<a href="{{site.url}}/categories.html#community"><h1 class="staticcategories"><i class="fas fa-users"></i> Community</h1></a>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.categories.community %}
@@ -26,7 +26,7 @@ layout: default
 			</ul>
 			</div>
 			
-			<div style="margin-right: 32px; border-left-width: 1px;" id="tutorials" class="content">
+			<div style="margin-right: 32px; border-left-width: 1px; margin-left: 10px;" id="tutorials" class="content">
 			<a href="{{site.url}}/categories.html#tutorials"><h1 id="tutorials" class="staticcategories"><i class="fa fa-book"></i> Tutorials</h1></a>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.categories.tutorials %}
