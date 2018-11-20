@@ -44,11 +44,13 @@ function guiident(pid){
 	var guimenus = plainscript[pid].innerText.match(/newgui(.*)/g);
 	//console.log(guimenus);
 
-	for (gms = 0; gms < guimenus.length; gms++){
-		var thefinal = guimenus[gms].slice(7, (guimenus[gms].indexOf("[") - 1));
-		var thefinalg =  new RegExp("\\b" + thefinal + "\\b", "g");
-		//console.log(thefinal);
-		plainscript[pid].innerHTML = plainscript[pid].innerHTML.replace(thefinalg, "<span style='color: #b95df3'><i>" + thefinal + "</i></span>");
+	if (guimenus !== null){
+		for (gms = 0; gms < guimenus.length; gms++){
+			var thefinal = guimenus[gms].slice(7, (guimenus[gms].indexOf("[") - 1));
+			var thefinalg =  new RegExp("\\b" + thefinal + "\\b", "g");
+			//console.log(thefinal);
+			plainscript[pid].innerHTML = plainscript[pid].innerHTML.replace(thefinalg, "<span style='color: #b95df3'><i>" + thefinal + "</i></span>");
+		}
 	}
 };
 
