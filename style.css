@@ -204,14 +204,6 @@ hr {
     transition: translateX 1s; */
 }
 
-.menuside:hover {
-	transform: translateX(0%);
-	transition: translateX 1s;
-}
-
-.menusideitems {
-	
-}
 .pseparator {
 	border-style: solid;
 	border-width: 2px;
@@ -329,14 +321,12 @@ a {
 
 .content {
 	font-size: 13px;
-	background-color: #4c4844;
-	/* margin-left: 200px;
-	margin-right: 200px; */
-	width: 80%;
-	padding-bottom: 20px;
-	border-style: solid;
-	border-color: #201d1a;
-	border-width: 2px;
+    background-color: #4c4844;
+    width: 50%;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-color: #201d1a;
+    border-width: 2px;
 	position: relative;
 }
 

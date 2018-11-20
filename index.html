@@ -2,20 +2,20 @@
 layout: default
 ---
 
-{% include sidemenu.html %}
+<!-- {% include sidemenu.html %} -->
 
 <div class="home">
 	<center>
-		<div class="content">
+		<div style="width: 95%; margin-top: 4px;" class="content">
 			<h1 class="fakecategorie"><i class="fas fa-info-circle"></i> About</h1>
-			<p class="subtitles">Welcome to SauerSauce</p>
+			<a href="https://sauer-sauce.github.io/community/2018/11/09/SauerSauce-How-to-contribute.html"><p class="subtitles">Welcome to SauerSauce</p></a>
 			<p class="descriptions">A Place to learn and share <a target="_blank" href="http://sauerbraten.org">Sauerbraten</a>'s world.</p>
-			<p>If you are looking for a place to learn or help, welcome to SauerSauce, a platform to keep tutorials related to Cube 2 Sauerbraten.</p>
-			<p>This site is maintained by the community, you can find the author of the tutorial next to all posts, feel free to contact him to remove your doubts.</p>
+			<p style="text-align: center;">If you are looking for a place to learn or help, welcome to SauerSauce, a platform to keep tutorials related to Cube 2 Sauerbraten.</p>
+			<p style="text-align: center;">This site is maintained by the community, you can find the author of the tutorial next to all posts, feel free to contact him to remove your doubts.</p>
 		</div>
-		<p>Latest contribution: <a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a> by {{site.posts.first.author}} in {{site.posts.first.categories}} [{{ site.posts.first.date | date: '%B %d, %Y' }}]</p> 
-
-		<div id="community" class="content">
+		<p style="text-align: center;"><b>Latest contribution</b>: <a href="{{site.posts.first.url}}">{{site.posts.first.title}}</a> by {{site.posts.first.author}} in {{site.posts.first.categories}} [{{ site.posts.first.date | date: '%B %d, %Y' }}]</p>
+		<li style="display: flex;">
+		<div style="margin-left: 32px; border-right-width: 1px;" id="community" class="content">
 			<a href="{{site.url}}/categories.html#community"><h1 class="staticcategories"><i class="fas fa-users"></i> Community</h1></a>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.categories.community %}
@@ -26,7 +26,7 @@ layout: default
 			</ul>
 			</div>
 			
-			<div id="tutorials" class="content">
+			<div style="margin-right: 32px; border-left-width: 1px;" id="tutorials" class="content">
 			<a href="{{site.url}}/categories.html#tutorials"><h1 id="tutorials" class="staticcategories"><i class="fa fa-book"></i> Tutorials</h1></a>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.categories.tutorials %}
@@ -36,5 +36,6 @@ layout: default
 			  {% endfor %}
 			</ul>
 		</div>
+		</li>
 	</center>
 </div>

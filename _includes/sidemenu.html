@@ -9,6 +9,7 @@
 		<a target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/contribution/_posts" title="new post"><i class="fas fa-plus-circle"></i></a>
 		<a href="{{page.url}}" title="refresh"><i class="fas fa-sync-alt"></i></a>
 	</li>
+	<div class="menusidecont">
 	<p style="font-size: 12px;">These posts need your support:</p>
 	{% for post in site.posts %}
 	{% assign postcontente = post.content | strip_newlines %}
@@ -27,6 +28,8 @@
 	<i title="missing content" class="fas fa-edit"></i>{{ post.title }}
 	</p>
 	{% endif %}
+	{% else %}
 	{% endif %}
 	{% endfor %}
+	</div>
 </ul>

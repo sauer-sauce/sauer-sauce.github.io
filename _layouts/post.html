@@ -8,7 +8,7 @@
 	
 	<center>
 		<div class="post">
-			<header class="content">
+			<header style="width: 80%" class="content">
 				<h1 class="subtitles">{{ page.title }} <a style="font-size: 15px;" target="_blank" href="https://github.com/sauer-sauce/sauer-sauce.github.io/tree/master/{{page.path}}" title="edit post"><i class="fas fa-edit"></i></a></h1>
 				<p class="descriptions">
 					{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • 
@@ -32,7 +32,7 @@
 			</header>
 		</div>
 		<br>
-		<div class="content">
+		<div style="width: 80%" class="content">
 			<h1 style="text-align: left;" class="fakecategorie">See also</h1>
 			<ul style="list-style-type: none; margin: 0; padding: 0;">
 			  {% for post in site.posts %}

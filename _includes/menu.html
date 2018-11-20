@@ -6,25 +6,15 @@
 
 <ul class="menubox">
 	<li class="menubtns">
-		<a href="{{page.url}}"><i class="fas fa-sync-alt"></i> Reload</a>
-	</li>
-
-	{% if page.url == "/index.html" %}
-	<li class="menubtns">
-		<a href="{{site.base}}#tutorials"><i class="fa fa-book"></i> Tutorials</a>
+		<a href="https://github.com/sauer-sauce/sauer-sauce.github.io/new/master/_posts"><i class="fas fa-plus"></i> Create</a>
 	</li>
 
 	<li class="menubtns">
-		<a href="{{site.base}}#community"><i class="fa fa-globe"></i> Community</a>
+		<a href="{{site.url}}"><i class="fa fa-home"></i> Home</a>
 	</li>
-	{% else %}
+
 	<li class="menubtns">
-		<a href="{{site.base}}"><i class="fa fa-home"></i> Home</a>
-	</li>
-	{% endif %}
-	
-	<li class="menubtns">
-		<a href="{{site.base}}#community"><i class="fa fa-bookmark"></i> Categories</a>
+		<a href="{{site.url}}/categories.html"><i class="fa fa-bookmark"></i> Archive</a>
 	</li>
 
 	<li class="menubtns">
