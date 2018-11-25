@@ -7,13 +7,12 @@ categories: tutorials
 excerpt: "This is the first installment of a multi-part series I’m doing on CubeScript. As the title suggests, I’m starting with a relatively abstract introduction."
 tags: cubescript
 ---
-<strong>What is CubeScript?</strong>
-<br>
+<h3>What is CubeScript?</h3>
 <p>CubeScript is the console language of Cube-based games; it is used to write scripts that can be executed in-game. Scripts written in CubeScript can be anywhere from a single line to hundreds of lines in length (I’ve never seen thousands, but I guess that’s theoretically possible too :P).</p>
 
 <p>While CubeScript shares many features with conventional programming languages, it has significant differences too. For example, one central focus of CubeScript is easy GUI design, a topic that will likely be covered in a later post.</p>
 
-<strong>Basics</strong>
+<h3>Basics</h3>
 <p>A CubeScript script is basically just a series of syntactically valid statements. A statement will generally be either the invocation of a command or an assignment to a variable. For example, if you’ve ever executed the following in the console:</p>
 <div class="cubescript">
 	fov 90
@@ -36,8 +35,8 @@ tags: cubescript
 </div>
 <p>Note that <a class="fixedcode">/* */</a>-comments are not supported.</p>
 
-<strong>Operators</strong>
-<p>Now that we’ve covered what a CubeScript script actually is, we can go on to talk about more complicated things you can do in one. The first thing to go over is operators such as <a class="fixedcode">+</a>, <a class="fixedcode">-</a>, <a class="fixedcode">*</a>, <a class="fixedcode">/</a> etc. Now, it is important to note here that <strong>CubeScript uses</strong> <a target="_blank" href="https://en.wikipedia.org/wiki/Polish_notation">polish/prefix notation</a>, like Lisp, if you’re familiar with that family of languages. Therefore, something like <a class="fixedcode">2 + 3</a> would, in CubeScript, be expressed as <a class="fixedcode">(+ 2 3)</a>. (This is basically a result of the fact that operators such as <a class="fixedcode">+</a> are just commands themselves, so they follow the same syntax as commands, but you probably don’t need to worry too much about that.) So, returning to our <a class="fixedcode">x</a> variable, let’s say we want to assign to <a class="fixedcode">x</a> the sum of <a class="fixedcode">2</a> and <a class="fixedcode">3</a>, we’d simply do this:</p>
+<h3>Operators</h3>
+<p>Now that we’ve covered what a CubeScript script actually is, we can go on to talk about more complicated things you can do in one. The first thing to go over is operators such as <a class="fixedcode">+</a>, <a class="fixedcode">-</a>, <a class="fixedcode">*</a>, <a class="fixedcode">/</a> etc. Now, it is important to note here that <b>CubeScript uses</b> <a target="_blank" href="https://en.wikipedia.org/wiki/Polish_notation">polish/prefix notation</a>, like Lisp, if you’re familiar with that family of languages. Therefore, something like <a class="fixedcode">2 + 3</a> would, in CubeScript, be expressed as <a class="fixedcode">(+ 2 3)</a>. (This is basically a result of the fact that operators such as <a class="fixedcode">+</a> are just commands themselves, so they follow the same syntax as commands, but you probably don’t need to worry too much about that.) So, returning to our <a class="fixedcode">x</a> variable, let’s say we want to assign to <a class="fixedcode">x</a> the sum of <a class="fixedcode">2</a> and <a class="fixedcode">3</a>, we’d simply do this:</p>
 <div class="cubescript">
 	x = (+ 2 3)
 </div>
@@ -62,7 +61,7 @@ tags: cubescript
 
 <p>A more exhaustive list of operators can be found in the official documentation <a target="_blank" href="http://sauerbraten.org/docs/config.html#cubescript">here</a>, but they all work in essentially the same way.</p>
 
-<strong>Basic Control Flow</strong>
+<h3>Basic Control Flow</h3>
 <p>As with most other languages, CubeScript supports some basic control flow constructs such as if-else statements and loops.</p>
 <p>In CubeScript, if-else statement follow this syntax:</p>
 
@@ -118,7 +117,7 @@ tags: cubescript
 
 <p>There are a few other loop constructs for looping over lists and strings. I’ll cover these in a future post.</p>
 
-<strong>Conclusion</strong>
+<h3>Conclusion</h3>
 <p>This has been a very brief and, in many ways, high-level introduction to the wonderful world of CubeScript. I’ll apologize in advance to those of you who were already familiar with all this, but for those who were not, I hope you got something out of this overview, and that you’re now better prepared to delve into more complex topics in future posts.</p>
 <p>In the near future, I’m planning to go over functions (i.e. the inner workings of <a class="fixedcode">[ ]</a> blocks), strings, lists, and GUI design. Let me know if I left anything out, and thanks for reading!</p>
 

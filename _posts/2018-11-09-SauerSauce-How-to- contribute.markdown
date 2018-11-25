@@ -8,7 +8,7 @@ excerpt: Anyone can contribute with a tutorial at any time, see how.
 tags: general
 ---
 
-<strong>Informations</strong>
+<h3>Informations</h3>
 <br>
 SauerSauce is basically a repository in github with an appearance of site/blog.
 <br>
@@ -34,7 +34,7 @@ The site was completely made from scratch by me, my skills are not many, so feel
 As you may have noticed, this simple theme with strange colors is based on the sauerbraten.org color palette.
 <br>
 <br>
-<strong>How to contribute</strong>
+<h3>How to contribute</h3>
 <br>
 Create an account on  <a href="https://github.com/">Github</a>
 <br>

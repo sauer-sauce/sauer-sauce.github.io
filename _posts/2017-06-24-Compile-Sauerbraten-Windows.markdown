@@ -8,14 +8,15 @@ excerpt: Compiling Sauerbraten for windows
 tags: source-code
 ---
 
-<p><strong>Downloads</strong></p>
+<h3>Downloads</h3>
 <a href="http://www.codeblocks.org/downloads/26">CodeBlocks download<a/> get the version without minGW
 <br>
 <p>
 <a href="http://tdm-gcc.tdragon.net/download">TDM64-GCC download</a> install wherever you prefer
 <br>
 <br>
-<strong>Configurations</strong>
+<h3>Configurations</h3>
+<p>
 <br>
 once both are installed, you'll want to open up codeblocks so we can configure the compiler <br>
 on the menu bar up top, select Settings > Compiler <br>

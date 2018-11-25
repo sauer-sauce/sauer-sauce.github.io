@@ -8,7 +8,7 @@ excerpt: Creating a Playermodel
 tags: models
 ---
 
-<p><strong>Adding a new playermodel</strong></strong></p>
+<h3>Adding a new playermodel</h3>
 
 Files that need modification: <br>
 src/fpsgame/render.cpp <br>
